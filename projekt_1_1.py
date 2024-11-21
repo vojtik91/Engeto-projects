@@ -38,13 +38,12 @@ garpike and stingray are also present.'''
 def analyze_text(text):
     # nase cara
     graph_line = "-" * 30
-    # puvodne jsem to psal s replace ----> ted vynechano
-    '''
+       
     #vycisteni textu -> nebude do delky slov zapocitavat znaky jako .,!?;
     clean_text = text.replace(".", "").replace(",", "").replace("?", "").replace("!", "").replace(";", "")
-    '''
-    # takhle to lze udelat metodou strip ----> asi elegantnejsi nez replace :-)
-    clean_text = text.strip(",.?!;")                                                                        
+    
+                                                                       
+    
     #rozdeleni na jednotliva slova
     words = clean_text.split()
 
