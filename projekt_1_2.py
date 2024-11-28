@@ -34,6 +34,9 @@ in modern oceans. Other fish such as paddlefish,
 garpike and stingray are also present.'''
 ]
 
+# pocet textů v listu TEXTS
+pocet_textu = len(TEXTS)
+
 # Analyzator textu
 def analyze_text(text):
     # nase cara
@@ -125,17 +128,17 @@ else:
         print(cara)
         print(f"Vitej v nasi appce {username}")
         print(cara)
-        print("Mame zde 3 texty, ktere muzes analyzovat.")
+        print(f"Mame zde {pocet_textu} texty, ktere muzes analyzovat.")
         print(cara)
                 
-        # vyber textu a overeni zda je zadano cislo a zda je cislo v intervalu <1,3>
+        # vyber textu a overeni zda je zadano cislo a zda je cislo v intervalu <1,pocet textu>
         # nasleduje samotna anlyza textu
         try:
-            text_number = int(input("zadej cislo textu, ktery chces analyzovat (od 1 do 3):"))
+            text_number = int(input(f"zadej cislo textu, ktery chces analyzovat (od 1 do {pocet_textu}):"))
             print(cara)
         
-            if text_number < 1 or text_number > 3:
-                print("zamysli se jeste jednou a zadej opravdu cislo od 1 do 3")
+            if text_number < 1 or text_number > pocet_textu:  
+                print(f"zamysli se jeste jednou a zadej opravdu cislo od 1 do {pocet_textu}")
             else:
                 analyze_text(TEXTS[text_number - 1])
 
