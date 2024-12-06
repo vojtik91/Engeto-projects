@@ -37,7 +37,7 @@ def zpracuj_vstup(prompt="Zadej 4ciferné číslo: "):
 
 # Uvítání
 lane = "-" * 30
-uvod = "Hey man, let's play Bulls 'n Cows!\nGuess my 4-digit number!"
+uvod = "Hey man, let's play Bulls 'n Cows!\nGuess my 4-digit number! \nor press 'q' for quit "
 print(lane, uvod, lane, sep="\n")
 
 # Vygenerování čísla
